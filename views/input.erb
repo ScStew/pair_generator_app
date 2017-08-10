@@ -1,0 +1,35 @@
+How many people do you wanna pair up?
+
+<script>
+function setup(){
+       var x = document.getElementById("names_to_pair").value;
+        document.getElementById("demo").innerHTML = "Enter their names in the boxes below:<br>";
+        for (var i = 1; i <= x; i++) {
+            var input = document.createElement("input");
+            input.type = "text";
+            input.name = "text" + i;
+            input.id = "marv";
+            input.required = true;
+            input.placeholder = "Enter Name"
+            document.getElementById("demo").appendChild(input).value;
+
+		}
+
+}
+</script>
+
+<!-- <form type = "post" action = "pair">
+<input type = "number" autofocus = "autofocus" name = "names_to_pair" id = "names_pair" oninput="setup()">
+<p id = "demo" name = "username" </p><br>
+<input type = "submit">
+
+</form> -->
+
+
+<form method = "post" action = "pair" id = "text_box">
+    <input type ="number" min = 2 autofocus = "autofocus" id ="names_to_pair" oninput ="setup()">
+    <p id = "demo"></p>
+    <br>
+    <input type = "submit">
+</form></center>
+
