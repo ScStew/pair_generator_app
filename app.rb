@@ -20,5 +20,6 @@ end
 post "/pair" do
 	pairs = params.values
 	product = random_pair(pairs)
-	"#{product}"
+	names = array_smasher(product)
+	p "#{names}"
 end

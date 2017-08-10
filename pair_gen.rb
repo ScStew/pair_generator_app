@@ -11,3 +11,17 @@ def random_pair(name_arr)
   	p array
 	end
 end
+
+
+def array_smasher(arr)
+	str_arr = []
+	arr.each do |value|
+		if value.length == 3
+			x = "#{value[0]}, #{value[1]}, and #{value[2]}"
+		else
+		 	x = "#{value[0]} and #{value[1]}"
+		end
+		str_arr << x
+	end
+	str_arr
+end
