@@ -2,3 +2,9 @@
 #inputs {
   display: block;
 }
+
+#results_name{
+	display :block;
+	text-align:center;
+	color:blue;
+}

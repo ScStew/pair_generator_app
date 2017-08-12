@@ -13,15 +13,15 @@ def random_pair(name_arr)
 end
 
 
-def array_smasher(arr)
-	str_arr = []
-	arr.each do |value|
+def array_moosher(multi_d_arr)
+	empty_str = "" 
+	multi_d_arr.each do |value|
 		if value.length == 3
-			x = "#{value[0]}, #{value[1]}, and #{value[2]}"
+			x = "#{value[0]}, #{value[1]}, and #{value[2]}" + "<br>"
 		else
-		 	x = "#{value[0]} and #{value[1]}"
+		 	x = "#{value[0]} and #{value[1]}" + "<br>"
 		end
-		str_arr << x
+		empty_str << x
 	end
-	str_arr
+	empty_str
 end

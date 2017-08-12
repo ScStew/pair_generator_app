@@ -1,25 +1,29 @@
 require "sinatra"
 require_relative "pair_gen.rb"
+enable :sessions
 
 get "/" do
- erb :name
+	erb :name
 end
 
 post "/names" do
-fname = params[:fname]
-lname = params[:lname]
-redirect "/input?fname=" + fname + "&lname=" + lname
+	session[:fname] = params[:fname]
+	session[:lname] = params[:lname]
+	redirect "/input?"
 end
 
 get "/input" do
-	fname = params[:fname]
-	lname = params[:lname]
-erb :input, local:[fname:fname, lname:lname]
+	erb :input
 end
 
 post "/pair" do
 	pairs = params.values
 	product = random_pair(pairs)
-	names = array_smasher(product)
-	p "#{names}"
+	names = array_moosher(product)
+	redirect "/results?names=" +names
+end
+
+get "/results" do
+	names = params[:names]
+	erb :results, locals:{fname:session[:fname], lname:session[:lname], names:names}
 end
