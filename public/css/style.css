@@ -1,10 +1,98 @@
+header{
+	text-align: center;
+	font-size: 500%;
+	border-style:dashed;
+	border-color:gray;
+	background-color:rgba(128,128,128,0.5);
+	text-shadow: -5px 0px 10px crimson;
+}
+ul{
+	
+	margin:0;
+	padding:0;
+	background-color:rgba(128,128,128,0.5);
+	border-style:dotted;
+	border-top-style:none;
+	border-color:gray;
+	font-size:3vh;
+	float:left;
+}
 
-#inputs {
-  display: block;
+li {
+	display:inline;
+	border-left-style:dotted;
+	border-color:gray;
+}
+
+li a {
+	color:black;
+   	padding:0;
+   	margin:0;
+}
+
+li a:hover{
+	background-color:crimson;
+	opacity:0.5;
+}
+
+body{
+	background-image: url(/images/zombie_background.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+}
+
+#names_page{
+	position:absolute;
+	text-shadow: -5px 0px 10px crimson;
+	font-size: 5vh;
+	top:25%;
+	left:0;
+	height:50%;
+	width: 50%;
+}
+#input_page{
+	text-shadow: -5px 0px 10px crimson;
+	font-size: 4vh;
+	position:absolute;
+	top:25%;
+	left:0;
+	height:50%;
+	width: 50%;
+}
+
+#that_one_line{
+	font-size: 5vh;
+	text-align:center;
+	color:black;
+	text-shadow: -5px 0px 10px crimson;
+	float:center;
+	position:absolute;
+	top:25%;
+	left:50;
+
 }
 
 #results_name{
-	display :block;
+	font-size: 5vh;
 	text-align:center;
-	color:blue;
+	color:black;
+	text-shadow: -5px 0px 10px crimson;
+	border-style:dashed;
+	border-color:gray;
+	background-color:rgba(128,128,128,0.5);
+	float:center;
+	position:absolute;
+	top:30%;
+	left:50;
+
+}
+
+footer{
+	font-size:4vh;
+	background-color:gray;
+	position:absolute;
+	text-align: center;
+	bottom:0;
+	left:50%;
 }

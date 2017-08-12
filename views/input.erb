@@ -1,4 +1,14 @@
-How many people do you wanna pair up?
+
+
+<div id = "input_page">
+How many people do you wanna pair up?<br>
+	<form method = "post" action = "pair" id = "text_box">
+	    <input type ="number" min = 2 autofocus = "autofocus" id ="names_to_pair" oninput ="setup()">
+	    <p id = "demo"></p>
+	    <br>
+	    <input type = "submit">
+	</form>
+</div>
 
 <script>
 function setup(){
@@ -8,23 +18,10 @@ function setup(){
             var input = document.createElement("input");
             input.type = "text";
             input.name = "text" + i;
-            input.id = "marv";
+            input.id = "input";
             input.required = true;
             input.placeholder = "Enter Name"
             document.getElementById("demo").appendChild(input).value;
-
 		}
-
 }
 </script>
-
-
-
-
-<form method = "post" action = "pair" id = "text_box">
-    <input type ="number" min = 2 autofocus = "autofocus" id ="names_to_pair" oninput ="setup()">
-    <p id = "demo"></p>
-    <br>
-    <input type = "submit">
-</form></center>
-
