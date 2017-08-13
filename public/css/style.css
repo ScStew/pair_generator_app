@@ -69,7 +69,7 @@ body{
 	float:center;
 	position:absolute;
 	top:25%;
-	left:50;
+	left:50%;
 
 }
 
@@ -81,10 +81,10 @@ body{
 	border-style:dashed;
 	border-color:gray;
 	background-color:rgba(128,128,128,0.5);
-	float:center;
+	float:left;
 	position:absolute;
-	top:30%;
-	left:50;
+	top:35%;
+	left:50%;
 
 }
 
