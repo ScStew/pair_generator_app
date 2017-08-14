@@ -18,7 +18,8 @@ end
 
 post "/pair" do
 	pairs = params.values
-	product = random_pair(pairs)
+	cap = capital(pairs)
+	product = random_pair(cap)
 	names = array_moosher(product)
 	redirect "/results?names=" +names
 end

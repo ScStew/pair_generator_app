@@ -25,3 +25,12 @@ def array_moosher(multi_d_arr)
 	end
 	empty_str
 end
+
+def capital(arr)
+	empty_arr = []
+	arr.each do |names|
+		x = names.capitalize
+		empty_arr << x
+	end
+	empty_arr
+end
