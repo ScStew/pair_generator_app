@@ -14,16 +14,16 @@ end
 
 
 def array_moosher(multi_d_arr)
-	empty_str = "" 
+	empty_arr = []
 	multi_d_arr.each do |value|
 		if value.length == 3
 			x = "#{value[0]}, #{value[1]}, and #{value[2]}" + "<br>"
 		else
 		 	x = "#{value[0]} and #{value[1]}" + "<br>"
 		end
-		empty_str << x
+		empty_arr << x
 	end
-	empty_str
+	empty_arr
 end
 
 def capital(arr)

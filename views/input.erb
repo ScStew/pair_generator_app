@@ -3,25 +3,43 @@
 <div id = "input_page">
 How many people do you wanna pair up?<br>
 	<form method = "post" action = "pair" id = "text_box">
-	    <input type ="number" min = 4 autofocus = "autofocus" id ="names_to_pair" oninput ="setup()">
+	    <input type ="number" min = 4 autofocus ="autofocus" id="names_to_pair" oninput="setup()">
+	    <button type = "button" onclick = "add_button()">+</button>
+	    <button type = "button" onclick = "minus_button()">-</button>
 	    <p id = "demo"></p>
-	    <br> 
-	    <input type = "submit">
+	    <input type = "submit" value = "enter">
+
 	</form>
 </div>
 
 <script>
-function setup(){
-       var x = document.getElementById("names_to_pair").value;
-        document.getElementById("demo").innerHTML = "Enter their names in the boxes below:<br>";
-        for (var count = 1; count <= x; count++) {
-            var input = document.createElement("input");
-            input.type = "text";
-            input.name = "text" + count;
-            input.id = "input";
-            input.required = true;
-            input.placeholder = "Enter Name"
-            document.getElementById("demo").appendChild(input).value;
-		}
+// function setup(){
+       // var x = document.getElementById("names_to_pair").value;
+//         document.getElementById("demo").innerHTML = "Enter their names in the boxes below:<br>";
+//         for (var count = 1; count <= x; count++) {
+//             var input = document.createElement("input");
+//             input.type = "text";
+//             input.name = "text" + count;
+//             input.id = "input";
+//             input.required = true;
+//             input.placeholder = "Enter Name"
+//             document.getElementById("demo").appendChild(input).value;
+// 		}
+// }
+function minus_button(){
+	var x = document.getElementById("demo"); 
+	x.removeChild(x.lastChild);
+	
 }
+
+function add_button(){
+	var input = document.createElement("input");
+	input.type = "text";
+	input.name = "input[]";
+	input.id = "input";
+	input.required = true;
+	input.placeholder = "Enter Name"
+	document.getElementById("demo").appendChild(input).value;
+}
+
 </script>

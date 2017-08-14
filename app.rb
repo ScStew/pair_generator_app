@@ -18,10 +18,10 @@ end
 
 post "/pair" do
 	pairs = params.values
-	cap = capital(pairs)
+	cap = capital(pairs.flatten)
 	product = random_pair(cap)
 	names = array_moosher(product)
-	redirect "/results?names=" +names
+	redirect "/results?names=" +names.to_s
 end
 
 get "/results" do
