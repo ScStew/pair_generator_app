@@ -21,7 +21,7 @@ post "/pair" do
 	cap = capital(pairs.flatten)
 	product = random_pair(cap)
 	session[:names] = array_moosher(product)
-	redirect "/results?names="
+	redirect "/results?"
 end
 
 get "/results" do
