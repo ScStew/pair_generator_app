@@ -34,3 +34,13 @@ def capital(arr)
 	end
 	empty_arr
 end
+
+
+def string_maker(arr)
+	empty_str = ""
+		arr.each do |pair|
+			
+			empty_str << pair
+		end
+	empty_str
+end

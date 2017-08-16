@@ -31,5 +31,6 @@ end
 
 post "/final_results" do
 	inputs = params[:inputs]
-	erb :final_outcome, locals:{inputs:inputs}
+	answer = string_maker(inputs)
+	erb :final_outcome, locals:{answer:answer, fname:session[:fname], lname:session[:lname]}
 end
