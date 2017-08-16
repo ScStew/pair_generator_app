@@ -20,11 +20,16 @@ post "/pair" do
 	pairs = params.values
 	cap = capital(pairs.flatten)
 	product = random_pair(cap)
-	names = array_moosher(product)
-	redirect "/results?names=" +names.to_s
+	session[:names] = array_moosher(product)
+	redirect "/results?names="
 end
 
 get "/results" do
-	names = params[:names]
-	erb :results, locals:{fname:session[:fname], lname:session[:lname], names:names}
+	erb :results, locals:{fname:session[:fname], lname:session[:lname], names:session[:names]}
+end
+
+
+post "/final_results" do
+	inputs = params[:inputs]
+	erb :final_outcome, locals:{inputs:inputs}
 end

@@ -3,5 +3,14 @@ Here are your pairs <%=fname%> <%=lname%>:<br>
 </div>
 
 <div id = "results_name">
-<%=names%>
+
+
+<form method = "post" action = "final_results">
+
+<%names.each do |x| %>
+<input type = "checkbox" name = "inputs[]" value = "<%=x%>"> <%=x%>
+<%end%>
+
+<input type = "submit" value = "enter">
+</form>
 </div>
