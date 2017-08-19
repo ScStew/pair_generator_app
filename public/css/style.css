@@ -69,12 +69,13 @@ body{
 	float:center;
 	position:absolute;
 	top:25%;
-	left:50%;
+	right:50%;
+	margin-bottom:1vh: 
 
 }
 
 #results_name{
-	font-size: 5vh;
+	font-size: 4vh;
 	text-align:center;
 	color:black;
 	text-shadow: -5px 0px 10px crimson;
@@ -82,9 +83,10 @@ body{
 	border-color:gray;
 	background-color:rgba(128,128,128,0.5);
 	float:left;
-	position:absolute;
-	top:35%;
-	left:50%;
+	position:fixed;
+	align-content:center;
+	top:60%;
+	right:20%;
 
 }
 
