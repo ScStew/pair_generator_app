@@ -10,7 +10,7 @@ choose what you wanna keep <%=fname%> <%=lname%>:<br>
 <%names.each do |x| %>
 <%i += 1%>
 <input type = "radio" name = "inputs + <%=i.to_s%>" value = "<%=x%>">yes
-<input type = "radio" name = "inputs + <%=i.to_s%>">no
+<input type = "radio" name = "inputs + <%=i.to_s%>" value = "">no
 <%=x%>
 <!-- <input type = "checkbox" name = "inputs[]" value = "<%=x%>"> <%=x%> -->
 <%end%>
