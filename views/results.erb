@@ -6,9 +6,13 @@ choose what you wanna keep <%=fname%> <%=lname%>:<br>
 
 
 <form method = "post" action = "final_results">
-
+<%i = 0%>
 <%names.each do |x| %>
-<input type = "checkbox" name = "inputs[]" value = "<%=x%>"> <%=x%>
+<%i += 1%>
+<input type = "radio" name = "inputs + <%=i.to_s%>" value = "<%=x%>">yes
+<input type = "radio" name = "inputs + <%=i.to_s%>">no
+<%=x%>
+<!-- <input type = "checkbox" name = "inputs[]" value = "<%=x%>"> <%=x%> -->
 <%end%>
 
 <input type = "submit" value = "enter">
